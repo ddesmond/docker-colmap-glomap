@@ -1,4 +1,4 @@
-apt-get install \
+apt-get install -y \
     git \
     cmake \
     ninja-build \
