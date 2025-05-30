@@ -15,9 +15,7 @@ RUN apt-get update -y && apt-get install -y \
     zip \
     git
 
-COPY ./setup-glomap.sh /setup-glomap.sh && chmod +x /setup-glomap.sh
-RUN bash /setup-glomap.sh
-
-
+COPY ./setup-glomap.sh /setup-glomap.sh
+RUN chmod +x /setup-glomap.sh && bash /setup-glomap.sh
 
 CMD ["colmap", "-h"]
