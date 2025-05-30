@@ -15,6 +15,8 @@ RUN apt-get update -y && apt-get install -y \
     zip \
     git
 
+
+
 COPY ./setup-glomap.sh /setup-glomap.sh
 RUN chmod +x /setup-glomap.sh && bash /setup-glomap.sh
 

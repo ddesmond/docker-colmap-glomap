@@ -24,6 +24,7 @@ apt-get install -y \
     nvidia-cuda-toolkit \
     nvidia-cuda-toolkit-gcc
 
+apt autoremove -y
 
 cd /opt
 mkdir glomap && cd glomap
