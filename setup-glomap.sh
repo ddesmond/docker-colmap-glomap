@@ -1,7 +1,6 @@
 apt-get install -y \
     wget \
     curl \
-    cmake \
     ninja-build \
     build-essential \
     libboost-program-options-dev \
@@ -24,6 +23,8 @@ apt-get install -y \
 apt-get install -y \
     nvidia-cuda-toolkit \
     nvidia-cuda-toolkit-gcc
+
+apt remove cmake -y
 
 cd /tmp
 wget https://github.com/Kitware/CMake/releases/download/v3.30.1/cmake-3.30.1.tar.gz
