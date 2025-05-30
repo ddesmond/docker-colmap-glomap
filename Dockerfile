@@ -15,4 +15,4 @@ RUN apt-get update -y && apt-get install -y \
     zip \
     git
 
-CMD ["nvidia-smi"]
+CMD ["colmap", "-h"]
