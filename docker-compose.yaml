@@ -1,7 +1,7 @@
 version: "1"
 
 services:
-  colmap:
+  colmap-glomap:
     build: .
     environment:
       - NVIDIA_VISIBLE_DEVICES=all
