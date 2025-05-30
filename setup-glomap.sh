@@ -1,5 +1,6 @@
 apt-get install -y \
-    git \
+    wget \
+    curl \
     cmake \
     ninja-build \
     build-essential \
