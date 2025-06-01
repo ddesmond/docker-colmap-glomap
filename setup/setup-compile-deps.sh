@@ -17,10 +17,8 @@ dnf install -y \
     glibc-headers \
     lz4-devel \
     metis-devel \
-    suitesparse
-
-dnf install -y \
-    suitesparse-devel suitesparse
+    suitesparse \
+    suitesparse-devel
 
 dnf install -y cuda-toolkit-12
 
