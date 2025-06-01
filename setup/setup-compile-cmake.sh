@@ -44,13 +44,13 @@ cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_CUDA_ARCHITECTURES=80
 make -j$(nproc) && make install
 
 # build cgal
-#echo "Building CGAL"
-#cd /tmp && mkdir cgal && cd cgal
-#wget https://github.com/CGAL/cgal/archive/refs/tags/v5.6.2.tar.gz
-#tar xvfz v5.6.2.tar.gz
-#cd cgal-5.6.2
-#mkdir build
-#cd build
-#cmake ..
-#make install
+echo "Building CGAL"
+cd /tmp && mkdir cgal && cd cgal
+wget https://github.com/CGAL/cgal/archive/refs/tags/v5.6.2.tar.gz
+tar xvfz v5.6.2.tar.gz
+cd cgal-5.6.2
+mkdir build
+cd build
+cmake ..
+make install
 
