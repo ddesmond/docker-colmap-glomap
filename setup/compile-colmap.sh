@@ -11,6 +11,8 @@ cd /tmp
 git clone https://github.com/ceres-solver/ceres-solver.git
 cd ceres-solver
 git pull
+git submodule update --init --recursive
+git pull
 cd ..
 echo $PWD
 mkdir -p ceres-bin && cd ceres-bin
