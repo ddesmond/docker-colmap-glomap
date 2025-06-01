@@ -8,6 +8,7 @@ dnf config-manager --set-enabled crb
 dnf install -y epel-release
 
 dnf update -y
+dnf groupinstall -y "Development Tools"
 
 dnf install -y \
     nano zip \
