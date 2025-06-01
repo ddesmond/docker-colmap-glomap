@@ -4,7 +4,7 @@ ln -s /usr/bin/ninja /usr/sbin/ninja
 
 find / -name "libcudss.so*"
 
-dnf install -y lapack-devel
+dnf install -y lapack-devel tbb-devel
 
 echo "Add cudss"
 cd /tmp && mkdir -p cudss && cd cudss
