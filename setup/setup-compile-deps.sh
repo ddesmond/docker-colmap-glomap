@@ -16,7 +16,6 @@ dnf install -y \
     glew-devel \
     qt5-qtbase-devel \
     qt5-qtbase-gui \
-    qt5-qtopengl-devel \
     CGAL-devel \
     ceres-solver-devel
 
