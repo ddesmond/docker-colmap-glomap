@@ -23,4 +23,5 @@ dnf install -y \
     freeimage libgcc mesa-libGL glew glog \
     gmp gmp-devel \
     flann-devel metis-devel \
+    mesa-libGLU \
     qt5-qtbase qt5-qtbase-gui libcurl --allowerasing
