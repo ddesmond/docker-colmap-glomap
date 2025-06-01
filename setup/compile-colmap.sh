@@ -3,6 +3,8 @@
 dnf install -y ninja-build
 locate boost | grep "/usr/local"
 # /usr/local/boost/libs -> /usr/local/lib/boost
+locate boost | grep "usr/"
+export BOOST_DIR=/usr/local/boost
 # COLMAP BUILD
 echo "Building COLMAP with GPU support"
 cd /opt

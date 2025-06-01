@@ -15,7 +15,7 @@ RUN bash /setup/deps.sh
 
 # ENV
 ENV HOME=/root \
-    PATH=/root/.local/bin:$PATH
+    PATH=/root/.local/bin:/usr/local:$PATH
 
 ## Pyenv
 #RUN curl https://pyenv.run | bash
