@@ -27,6 +27,14 @@ mkdir build && cd build
 cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_CUDA_ARCHITECTURES=80
 make -j$(nproc) && make install
 
+cd /tmp && mkdir gmp && cd gmp
+curl -fLO https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
+tar -xf gmp-6.2.1.tar.xz
+cd gmp-6.2.1
+./configure
+make all
+make install
+
 # build cgal
 echo "Building CGAL"
 cd /tmp && mkdir cgal && cd cgal
