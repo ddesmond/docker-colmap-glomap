@@ -3,6 +3,8 @@ echo "Running colmap/glomap"
 
 export PATH=/usr/local/lib:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+updatedb
+locate libcudss
 
 colmap -h
 glomap -h

@@ -26,7 +26,3 @@ dnf install -y \
     mesa-libGLU \
     freeglut freeglut-devel \
     qt5-qtbase qt5-qtbase-gui libcurl --allowerasing
-
-
-updatedb
-locate libcudss
