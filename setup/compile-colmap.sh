@@ -12,7 +12,7 @@ mkdir colmap && cd colmap
 git clone https://github.com/colmap/colmap.git .
 mkdir build
 cd build
-cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=all
+cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=80
 ninja && ninja install
 
 colmap -v
