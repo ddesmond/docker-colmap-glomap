@@ -32,6 +32,7 @@ RUN pyenv install $PYTHON_VERSION && \
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
 
+RUN bash /setup/setup-glomap.sh
 
 RUN echo "Done."
 
