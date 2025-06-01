@@ -4,5 +4,6 @@ if [ -e /.colmap-init ]; then
   bash /setup/setup.sh
   bash /setup/run.sh
 else
+  echo "Run.sh"
   bash /setup/run.sh
 fi
