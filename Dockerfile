@@ -19,11 +19,9 @@ ENV HOME=/root \
 
 # Pyenv
 RUN curl https://pyenv.run | bash
+ARG PYTHON_VERSION=3.10.12
 ENV PATH=$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH
 
-ARG PYTHON_VERSION=3.10.12
-
-# Python
 RUN pyenv install $PYTHON_VERSION && \
     pyenv global $PYTHON_VERSION && \
     pyenv rehash && \
