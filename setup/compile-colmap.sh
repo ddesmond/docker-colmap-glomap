@@ -11,9 +11,7 @@ cd boost
 wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
 
 tar xfvz boost_1_82_0.tar.gz > /dev/null
-ls -la .
-
-cd boost
+cd boost_1_82_0
 ./bootstrap.sh
 ./b2 install
 
