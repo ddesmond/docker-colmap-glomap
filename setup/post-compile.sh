@@ -30,5 +30,5 @@ dnf install -y \
 echo "Add cudss"
 cd /opt && mkdir -p cudss && cd /opt/cudss
 wget https://developer.download.nvidia.com/compute/cudss/redist/libcudss/linux-x86_64/libcudss-linux-x86_64-0.3.0.9_cuda12-archive.tar.xz
-tar xvf libcudss-linux-x86_64-0.3.0.9_cuda12-archive.tar.xz
+tar xvz libcudss-linux-x86_64-0.3.0.9_cuda12-archive.tar.xz
 
