@@ -29,5 +29,5 @@ dnf install -y \
 dnf remove cmake -y
 
 updatedb
-locate boost | grep "usr/"
+
 

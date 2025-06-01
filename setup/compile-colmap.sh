@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dnf install -y ninja-build
-
+locate boost | grep "usr/"
 # COLMAP BUILD
 echo "BUilding COLMAP with GPU support"
 cd /opt
