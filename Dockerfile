@@ -33,7 +33,7 @@ COPY ./setup /setup
 RUN chmod +x /setup/*.sh
 
 # Install Python dependencies
-RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
+# RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
 
 RUN bash /setup/setup-compile-deps.sh
 RUN bash /setup/setup-compile-cmake.sh
