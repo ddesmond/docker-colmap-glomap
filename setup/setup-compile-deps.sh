@@ -1,5 +1,4 @@
 #!/bin/bash
-dnf remove cmake -y
 
 # colmap + glomap deps
 dnf install -y \
