@@ -3,6 +3,9 @@
 # colmap + glomap deps
 dnf install -y \
     ninja-build \
+    boost-devel \
+    boost-filesystem \
+    boost-regex \
     boost-program-options \
     boost-graph \
     boost-system \
