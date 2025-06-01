@@ -1,14 +1,19 @@
 #!/bin/bash
 
-dnf install -y ninja-build boost-devel boost-headers glibc-headers
+dnf install -y glibc-headers
 ln -s /usr/bin/ninja /usr/sbin/ninja
 # /usr/local/boost/libs -> /usr/local/lib/boost
 
-updatedb
-which boost
-echo "Search for boost"
-locate boost | grep "usr/" | grep "cmake"
-export Boost_DIR=/usr/include
+# boost
+cd /tmp
+wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
+mkdir -p boost
+tar xfvz boost_1_82_0.tar.gz -C boost
+
+cd boost
+./bootstrap.sh
+./b2 install
+
 
 
 # COLMAP BUILD
