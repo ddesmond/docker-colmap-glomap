@@ -18,15 +18,10 @@ cd ceres-solver
 git pull
 git submodule update --init --recursive
 git pull
-cd ..
-echo $PWD
-mkdir -p ceres-bin && cd ceres-bin
-cmake ../ceres-solver -DCUDA=ON
-make -j$(nproc)
-# Optionally install Ceres, it can also be exported using CMake which
-# allows Ceres to be used without requiring installation, see the documentation
-# for the EXPORT_BUILD_DIR option for more information.
-make install
+mkdir build && cd build
+cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=ON -DCMAKE_CUDA_ARCHITECTURES=86
+make -j$(nproc) && make install
+
 
 
 # COLMAP BUILD
