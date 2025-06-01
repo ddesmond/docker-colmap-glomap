@@ -14,6 +14,8 @@ dnf install -y \
     qt5-qtbase-devel \
     qt5-qtbase-gui \
     CGAL-devel \
+    glibc-headers \
+    lz4-devel \
     ceres-solver-devel
 
 dnf install -y \
