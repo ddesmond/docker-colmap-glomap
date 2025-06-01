@@ -20,7 +20,9 @@ dnf install -y \
     suitesparse
 
 dnf install -y \
-    nvidia-cuda-toolkit \
+    suitesparse-devel suitesparse
+
+dnf install -y cuda-toolkit-12 \
     nvidia-cuda-toolkit-gcc
 
 dnf remove cmake -y
