@@ -16,3 +16,8 @@ dnf install -y \
 
 dnf install -y \
     nvidia-container-toolkit
+
+dnf install -y \
+    boost-program-options glibc ceres-solver \
+    freeimage libgcc mesa-libGL glew glog \
+    qt5-qtbase qt5-qtbase-gui libcurl
