@@ -4,6 +4,8 @@ ln -s /usr/bin/ninja /usr/sbin/ninja
 
 find / -name "libcudss.so*"
 
+dnf install -y lapack-devel
+
 echo "Add cudss"
 cd /tmp && mkdir -p cudss && cd cudss
 wget https://developer.download.nvidia.com/compute/cudss/redist/libcudss/linux-x86_64/libcudss-linux-x86_64-0.3.0.9_cuda12-archive.tar.xz
