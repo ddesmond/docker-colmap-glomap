@@ -7,6 +7,8 @@ dnf install -y dnf-plugins-core
 dnf config-manager --set-enabled crb
 dnf install -y epel-release
 
+/usr/bin/crb enable
+
 dnf update -y
 dnf groupinstall -y "Development Tools"
 
