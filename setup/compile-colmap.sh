@@ -21,6 +21,7 @@ cd ceres-solver
 git pull
 git submodule update --init --recursive
 git pull
+sed -i 's/\${cudss_VERSION}//g' CMakeLists.txt
 mkdir build && cd build
 cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=ON -DCMAKE_CUDA_ARCHITECTURES=80
 make -j$(nproc) && make install
