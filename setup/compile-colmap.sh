@@ -2,6 +2,8 @@
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
 
+find / -name "libcudss.so*"
+
 echo "Building Ceres"
 cd /tmp
 
@@ -13,8 +15,8 @@ git pull
 cd ..
 echo $PWD
 mkdir -p ceres-bin && cd ceres-bin
-cmake ../ceres-solver
-make -j$(nproc) -DCUDA=ON
+cmake ../ceres-solver -DCUDA=ON
+make -j$(nproc)
 # Optionally install Ceres, it can also be exported using CMake which
 # allows Ceres to be used without requiring installation, see the documentation
 # for the EXPORT_BUILD_DIR option for more information.
