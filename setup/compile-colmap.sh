@@ -1,5 +1,6 @@
 #!/bin/bash
-dnf install -y ninja
+
+dnf install -y ninja-build
 
 # COLMAP BUILD
 echo "BUilding COLMAP with GPU support"
