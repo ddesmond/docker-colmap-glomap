@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dnf install -y glibc-headers
+
 
 
 # compile CMAKE
@@ -12,15 +12,15 @@ tar xfvz cmake-3.30.1.tar.gz && cd cmake-3.30.1 > /dev/null
 
 
 # boost
-echo "Compiling Boost"
-cd /tmp
-mkdir -p boost
-cd boost
-wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
-tar xfvz boost_1_82_0.tar.gz > /dev/null
-cd boost_1_82_0
-./bootstrap.sh
-./b2 install
+#echo "Compiling Boost"
+#cd /tmp
+#mkdir -p boost
+#cd boost
+#wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
+#tar xfvz boost_1_82_0.tar.gz > /dev/null
+#cd boost_1_82_0
+#./bootstrap.sh
+#./b2 install
 
 
 echo "Add cudss"
@@ -47,13 +47,13 @@ cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_CUDA_ARCHITECTURES=80
 make -j$(nproc) && make install
 
 # build cgal
-echo "Building CGAL"
-cd /tmp && mkdir cgal && cd cgal
-wget https://github.com/CGAL/cgal/archive/refs/tags/v5.6.2.tar.gz
-tar xvfz v5.6.2.tar.gz
-cd cgal-5.6.2
-mkdir build
-cd build
-cmake ..
-make install
+#echo "Building CGAL"
+#cd /tmp && mkdir cgal && cd cgal
+#wget https://github.com/CGAL/cgal/archive/refs/tags/v5.6.2.tar.gz
+#tar xvfz v5.6.2.tar.gz
+#cd cgal-5.6.2
+#mkdir build
+#cd build
+#cmake ..
+#make install
 

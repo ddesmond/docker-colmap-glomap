@@ -23,8 +23,9 @@ dnf install -y \
     lapack-devel tbb-devel \
     gmp gmp-devel \
     mpfr mpfr-devel \
-    qt5-devel
+    qt5-devel \
+    boost-devel \
+    glibc-headers
 
-updatedb
 
 
