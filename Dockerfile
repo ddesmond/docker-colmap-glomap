@@ -29,14 +29,15 @@ ENV HOME=/root \
 
 
 WORKDIR /setup
-COPY ./setup /setup
-RUN chmod +x /setup/*.sh
+COPY ./setup/setup-compile-deps.sh /setup/setup-compile-deps.sh
+RUN chmod +x /setup/*.sh && bash /setup/setup-compile-deps.sh
 
 # Install Python dependencies
 # RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
 
-RUN bash /setup/setup-compile-deps.sh
-RUN bash /setup/setup-compile-cmake.sh
+WORKDIR /setup
+COPY ./setup/setup-compile-cmake.sh /setup/setup-compile-cmake.sh
+RUN chmod +x /setup/*.sh && bash /setup/setup-compile-cmake.sh
 
 # compile colmap
 RUN bash /setup/compile-colmap.sh
