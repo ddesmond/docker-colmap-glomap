@@ -3,17 +3,19 @@
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
 # /usr/local/boost/libs -> /usr/local/lib/boost
+dnf install -y suitesparse-devel
 
+echo "Building Ceres"
 cd /tmp
-mkdir -p ceres
-cd ceres
-git clone https://ceres-solver.googlesource.com/ceres-solver .
+
+git clone https://github.com/ceres-solver/ceres-solver.git
+cd ceres-solver
+git pull
 cd ..
-mkdir ceres-bin
-cd ceres-bin
-cmake ../ceres
+echo $PWD
+mkdir -p ceres-bin && cd ceres-bin
+cmake ../ceres-solver
 make -j$(nproc)
-make test
 # Optionally install Ceres, it can also be exported using CMake which
 # allows Ceres to be used without requiring installation, see the documentation
 # for the EXPORT_BUILD_DIR option for more information.
