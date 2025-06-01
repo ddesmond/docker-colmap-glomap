@@ -6,9 +6,12 @@ ln -s /usr/bin/ninja /usr/sbin/ninja
 
 # boost
 cd /tmp
-wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
 mkdir -p boost
-tar xfvz boost_1_82_0.tar.gz -C boost
+cd boost
+wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
+
+tar xfvz boost_1_82_0.tar.gz > /dev/null
+ls -la .
 
 cd boost
 ./bootstrap.sh
