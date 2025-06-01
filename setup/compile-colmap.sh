@@ -1,7 +1,12 @@
 #!/bin/bash
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
-dnf install boost-program-options -y
+
+
+find / -type d -name "libboost_program_options.so"
+
+updatedb
+locate libboost_program_options
 
 
 # extra deps
