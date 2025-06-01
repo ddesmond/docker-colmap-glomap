@@ -3,8 +3,8 @@
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
 # /usr/local/boost/libs -> /usr/local/lib/boost
-dnf install -y suitesparse-devel suitparse
-
+dnf install -y suitesparse-devel suitesparse
+dnf install -y cuda-toolkit-12
 echo "Building Ceres"
 cd /tmp
 
