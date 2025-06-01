@@ -25,8 +25,6 @@ dnf install -y \
     mpfr mpfr-devel \
     qt5-devel
 
-
-
 updatedb
 
 
