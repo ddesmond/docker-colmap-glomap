@@ -20,4 +20,4 @@ cd build
 cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=80
 ninja && ninja install
 
-colmap -v
+colmap -h
