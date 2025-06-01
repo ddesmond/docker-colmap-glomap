@@ -5,7 +5,7 @@ ENV TZ=Europe/Zagreb
 RUN mkdir -p /data && chmod -R 777 /data
 
 WORKDIR /setup
-COPY ./setup /setup
+COPY ./setup/deps.sh /setup/deps.sh
 
 # Copy
 RUN chmod +x /setup/*.sh
@@ -26,6 +26,11 @@ RUN pyenv install $PYTHON_VERSION && \
     pyenv global $PYTHON_VERSION && \
     pyenv rehash && \
     pip install --no-cache-dir --upgrade pip setuptools wheel
+
+
+WORKDIR /setup
+COPY ./setup /setup
+RUN chmod +x /setup/*.sh
 
 # Install Python dependencies
 RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
