@@ -24,4 +24,9 @@ dnf install -y \
     gmp gmp-devel \
     flann-devel metis-devel \
     mesa-libGLU \
+    freeglut freeglut-devel \
     qt5-qtbase qt5-qtbase-gui libcurl --allowerasing
+
+
+updatedb
+locate libcudss
