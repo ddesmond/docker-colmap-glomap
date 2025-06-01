@@ -17,15 +17,15 @@ RUN bash /setup/deps.sh
 ENV HOME=/root \
     PATH=/root/.local/bin:$PATH
 
-# Pyenv
-RUN curl https://pyenv.run | bash
-ARG PYTHON_VERSION=3.10.12
-ENV PATH=$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH
-
-RUN pyenv install $PYTHON_VERSION && \
-    pyenv global $PYTHON_VERSION && \
-    pyenv rehash && \
-    pip install --no-cache-dir --upgrade pip setuptools wheel
+## Pyenv
+#RUN curl https://pyenv.run | bash
+#ARG PYTHON_VERSION=3.10.12
+#ENV PATH=$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH
+#
+#RUN pyenv install $PYTHON_VERSION && \
+#    pyenv global $PYTHON_VERSION && \
+#    pyenv rehash && \
+#    pip install --no-cache-dir --upgrade pip setuptools wheel
 
 
 WORKDIR /setup
