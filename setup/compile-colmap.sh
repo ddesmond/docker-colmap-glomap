@@ -1,6 +1,8 @@
 #!/bin/bash
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
+dnf install boost-program-options-1.82
+
 
 # extra deps
 export cudss_DIR=/tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/lib/cmake/cudss
