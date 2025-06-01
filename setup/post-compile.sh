@@ -26,6 +26,7 @@ dnf install -y \
     mesa-libGLU \
     freeglut freeglut-devel \
     xz-devel \
+    lapack-devel tbb-devel \
     qt5-qtbase qt5-qtbase-gui libcurl --allowerasing
 
 
