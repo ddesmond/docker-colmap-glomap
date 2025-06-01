@@ -3,7 +3,7 @@
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
 # /usr/local/boost/libs -> /usr/local/lib/boost
-dnf install -y suitesparse-devel
+dnf install -y suitesparse-devel suitparse
 
 echo "Building Ceres"
 cd /tmp
@@ -17,7 +17,7 @@ cd ..
 echo $PWD
 mkdir -p ceres-bin && cd ceres-bin
 cmake ../ceres-solver
-make -j$(nproc)
+make -j$(nproc) -DCUDA=ON
 # Optionally install Ceres, it can also be exported using CMake which
 # allows Ceres to be used without requiring installation, see the documentation
 # for the EXPORT_BUILD_DIR option for more information.
