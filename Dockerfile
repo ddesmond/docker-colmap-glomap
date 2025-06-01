@@ -1,9 +1,6 @@
 FROM nvidia/cuda:12.6.3-runtime-rockylinux9
 
-
 ENV TZ=Europe/Zagreb
-
-ARG USE_PERSISTENT_DATA
 
 RUN mkdir -p /data && chmod -R 777 /data
 
