@@ -6,7 +6,7 @@ dnf install -y ninja-build
 
 updatedb
 echo "Search for boost"
-locate "BoostConfig"
+locate BoostConfig
 export Boost_DIR=/usr/include/boost
 
 
