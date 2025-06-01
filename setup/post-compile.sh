@@ -3,10 +3,11 @@
 dnf update -y
 dnf install -y dnf-plugins-core
 dnf config-manager --set-enabled crb
-/usr/bin/crb enable
+
 
 dnf install -y epel-release
 dnf update -y
+/usr/bin/crb enable
 
 dnf install -y \
     nano zip \
