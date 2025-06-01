@@ -1,7 +1,7 @@
 #!/bin/bash
 
 dnf install -y ninja-build
-
+ln -s /usr/bin/ninja /usr/bin/ninja-build
 # /usr/local/boost/libs -> /usr/local/lib/boost
 
 updatedb
