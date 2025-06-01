@@ -20,3 +20,6 @@ dnf install  -y \
   tk-devel libffi-devel xz-devel \
   libuuid-devel gdbm-libs libnsl2 \
   mesa-libGLU
+
+# git lfs
+/usr/bin/git lfs install

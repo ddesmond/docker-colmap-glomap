@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # colmap + glomap deps
-dnf install -y
-    git git-lfs \
+dnf install -y \
     ninja-build \
     boost-program-options \
     boost-graph \
@@ -21,7 +20,7 @@ dnf install -y
     CGAL-devel \
     ceres-solver-devel
 
-/usr/bin/git lfs install
+
 
 dnf install -y \
     nvidia-cuda-toolkit \
