@@ -7,7 +7,7 @@ ln -s /usr/bin/ninja /usr/sbin/ninja
 updatedb
 echo "Search for boost"
 locate BoostConfig
-export Boost_DIR=/usr/include/boost
+export Boost_DIR=/usr/include
 
 
 # COLMAP BUILD
