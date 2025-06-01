@@ -22,10 +22,12 @@ dnf install -y \
     CGAL-devel \
     ceres-solver-devel
 
-
-
 dnf install -y \
     nvidia-cuda-toolkit \
     nvidia-cuda-toolkit-gcc
 
 dnf remove cmake -y
+
+updatedb
+locate boost | grep "usr/"
+
