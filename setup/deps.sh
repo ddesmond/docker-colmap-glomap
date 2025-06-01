@@ -19,27 +19,3 @@ dnf install  -y \
   tk-devel libffi-devel xz-devel \
   libuuid-devel gdbm-libs libnsl2 \
   mesa-libGLU
-
-# colmap + glomap deps
-dnf install -y \
-    ninja-build \
-    boost-program-options \
-    boost-graph \
-    boost-system \
-    eigen3-devel \
-    flann-devel \
-    freeimage-devel \
-    metis-devel \
-    glog-devel \
-    gtest-devel \
-    sqlite-devel \
-    glew-devel \
-    qt5-qtbase-devel \
-    qt5-qtbase-gui \
-    qt5-qtopengl-devel \
-    CGAL-devel \
-    ceres-solver-devel
-
-updatedb
-
-/usr/bin/git lfs install
