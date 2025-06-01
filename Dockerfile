@@ -39,9 +39,17 @@ WORKDIR /setup
 COPY ./setup/setup-compile-cmake.sh /setup/setup-compile-cmake.sh
 RUN chmod +x /setup/*.sh && bash /setup/setup-compile-cmake.sh
 
+
+WORKDIR /setup
+COPY ./setup/compile-colmap.sh /setup/compile-colmap.sh
 # compile colmap
-RUN bash /setup/compile-colmap.sh
+RUN chmod +x /setup/*.sh && bash /setup/compile-colmap.sh
+
+
+
 #RUN bash /setup/compile-glomap.sh
+
+
 
 RUN echo "Setup Done."
 
