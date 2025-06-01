@@ -3,6 +3,8 @@
 ln -s /usr/bin/ninja /usr/sbin/ninja
 
 # extra deps
+export cudss_DIR=/tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/lib/cmake/cudss
+export LD_LIBRARY_PATH=/tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/lib/:$LD_LIBRARY_PATH
 
 
 # COLMAP BUILD
