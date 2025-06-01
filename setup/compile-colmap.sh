@@ -2,12 +2,6 @@
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
 
-
-find / -type d -name "libboost_program_options.so"
-
-updatedb
-locate libboost_program_options
-
 ln -s /usr/local/lib/libboost_program_options.so.1.82.0 /usr/lib64/libboost_program_options.so.1.82.0
 
 # extra deps
