@@ -16,7 +16,6 @@ dnf install -y \
     CGAL-devel \
     glibc-headers \
     lz4-devel \
-    ceres-solver-devel \
     metis-devel \
     suitesparse
 
