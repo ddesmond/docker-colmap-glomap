@@ -18,9 +18,12 @@ dnf install -y \
     lz4-devel \
     metis-devel \
     suitesparse \
-    suitesparse-devel
-
-dnf install -y cuda-toolkit-12
+    suitesparse-devel \
+    cuda-toolkit-12 \
+    lapack-devel tbb-devel \
+    gmp gmp-devel \
+    mpfr mpfr-devel \
+    qt5-devel
 
 dnf remove cmake -y
 
