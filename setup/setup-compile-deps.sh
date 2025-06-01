@@ -1,4 +1,5 @@
 #!/bin/bash
+dnf remove cmake -y
 
 # colmap + glomap deps
 dnf install -y \
@@ -16,7 +17,6 @@ dnf install -y \
     CGAL-devel \
     glibc-headers \
     lz4-devel \
-    metis-devel \
     suitesparse \
     suitesparse-devel \
     cuda-toolkit-12 \
@@ -25,7 +25,7 @@ dnf install -y \
     mpfr mpfr-devel \
     qt5-devel
 
-dnf remove cmake -y
+
 
 updatedb
 
