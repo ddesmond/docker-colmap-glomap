@@ -1,8 +1,5 @@
 #!/bin/bash
 
-
-
-
 # compile CMAKE
 echo "Compiling CMAKE"
 cd /tmp
@@ -12,15 +9,15 @@ tar xfvz cmake-3.30.1.tar.gz && cd cmake-3.30.1 > /dev/null
 
 
 # boost
-#echo "Compiling Boost"
-#cd /tmp
-#mkdir -p boost
-#cd boost
-#wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
-#tar xfvz boost_1_82_0.tar.gz > /dev/null
-#cd boost_1_82_0
-#./bootstrap.sh
-#./b2 install
+echo "Compiling Boost"
+cd /tmp
+mkdir -p boost
+cd boost
+wget https://archives.boost.io/release/1.82.0/source/boost_1_82_0.tar.gz
+tar xfvz boost_1_82_0.tar.gz > /dev/null
+cd boost_1_82_0
+./bootstrap.sh
+./b2 install
 
 
 echo "Add cudss"
