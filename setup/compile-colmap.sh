@@ -5,6 +5,7 @@ ln -s /usr/bin/ninja /usr/sbin/ninja
 # /usr/local/boost/libs -> /usr/local/lib/boost
 
 updatedb
+which boost
 echo "Search for boost"
 locate BoostConfig
 export Boost_DIR=/usr/include
