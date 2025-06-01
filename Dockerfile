@@ -64,6 +64,7 @@ COPY ./setup /setup
 COPY --from=builder /colmap-install/ /usr/local/
 COPY --from=builder /glomap-install/ /usr/local/
 COPY --from=builder /usr/local/lib/ /usr/local/lib/
+COPY --from=builder /tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/ /opt/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/
 
 RUN chmod +x /setup/*.sh && bash /setup/post-compile.sh
 
