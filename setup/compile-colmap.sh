@@ -7,7 +7,7 @@ ln -s /usr/bin/ninja /usr/sbin/ninja
 updatedb
 which boost
 echo "Search for boost"
-locate boost | grep "usr/"
+locate boost | grep "usr/" | grep "cmake"
 export Boost_DIR=/usr/include
 
 
