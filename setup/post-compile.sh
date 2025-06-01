@@ -22,4 +22,5 @@ dnf install -y \
     boost-program-options glibc ceres-solver \
     freeimage libgcc mesa-libGL glew glog \
     gmp gmp-devel \
+    flann-devel \
     qt5-qtbase qt5-qtbase-gui libcurl --allowerasing

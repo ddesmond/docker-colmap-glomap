@@ -63,6 +63,7 @@ COPY ./setup /setup
 
 COPY --from=builder /colmap-install/ /usr/local/
 COPY --from=builder /glomap-install/ /usr/local/
+COPY --from=builder /usr/local/lib/ /usr/local/lib/
 
 RUN chmod +x /setup/*.sh && bash /setup/post-compile.sh
 
