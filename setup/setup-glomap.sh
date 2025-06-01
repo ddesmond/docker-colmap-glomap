@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # colmap + glomap deps
-dnf install -y \
+dnf install -y
+    git git-lfs \
     ninja-build \
     boost-program-options \
     boost-graph \
@@ -20,22 +21,18 @@ dnf install -y \
     CGAL-devel \
     ceres-solver-devel
 
-updatedb
-
 /usr/bin/git lfs install
 
 dnf install -y \
     nvidia-cuda-toolkit \
     nvidia-cuda-toolkit-gcc
 
-apt remove cmake -y
+dnf remove cmake -y
 
 cd /tmp
 wget https://github.com/Kitware/CMake/releases/download/v3.30.1/cmake-3.30.1.tar.gz
 tar xfvz cmake-3.30.1.tar.gz && cd cmake-3.30.1
 ./bootstrap && make -j$(nproc) && make install
-
-apt autoremove -y
 
 cd /opt
 mkdir glomap && cd glomap
