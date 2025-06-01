@@ -17,6 +17,6 @@ cd build
 cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=80 -DCMAKE_INSTALL_PREFIX=/glomap-install
 ninja && ninja install
 
-glomap -h
+/glomap-install/bin/glomap -h
 
 ls -la /glomap-install
