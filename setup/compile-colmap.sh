@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dnf install -y ninja-build
+dnf install -y ninja-build boost-devel
 ln -s /usr/bin/ninja /usr/sbin/ninja
 # /usr/local/boost/libs -> /usr/local/lib/boost
 
