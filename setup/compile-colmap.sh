@@ -19,3 +19,5 @@ cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=80 -DCMAKE_INSTALL_PREFIX=/colmap-in
 ninja && ninja install
 
 colmap -h
+
+ls -la /colmap-install

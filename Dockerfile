@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.6.3-runtime-rockylinux9
+FROM nvidia/cuda:12.6.3-runtime-rockylinux9 AS builder
 
 ENV TZ=Europe/Zagreb
 
@@ -46,11 +46,25 @@ COPY ./setup/compile-colmap.sh /setup/compile-colmap.sh
 RUN chmod +x /setup/*.sh && bash /setup/compile-colmap.sh
 
 
-
 #RUN bash /setup/compile-glomap.sh
+WORKDIR /setup
+COPY ./setup/compile-glomap.sh /setup/compile-glomap.sh
+# compile colmap
+RUN chmod +x /setup/*.sh && bash /setup/compile-glomap.sh
 
 
+RUN echo "Compile Done."
 
-RUN echo "Setup Done."
+
+FROM nvidia/cuda:12.6.3-runtime-rockylinux9 AS runtime
+
+WORKDIR /setup
+COPY ./setup /setup
+
+COPY --from=builder /colmap-install/ /usr/local/
+COPY --from=builder /glomap-install/ /usr/local/
+
+RUN chmod +x /setup/*.sh && bash /setup/post-compile.sh
+
 
 CMD ["bash","/setup/startup.sh"]
