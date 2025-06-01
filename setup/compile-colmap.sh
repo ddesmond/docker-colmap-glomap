@@ -1,6 +1,8 @@
 #!/bin/bash
+dnf install -y ninja
 
 # COLMAP BUILD
+echo "BUilding COLMAP with GPU support"
 cd /opt
 mkdir colmap && cd colmap
 git clone https://github.com/colmap/colmap.git .
