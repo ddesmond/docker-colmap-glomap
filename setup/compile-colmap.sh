@@ -8,6 +8,7 @@ find / -type d -name "libboost_program_options.so"
 updatedb
 locate libboost_program_options
 
+ln -s /usr/local/lib/libboost_program_options.so.1.82.0 /usr/lib64/libboost_program_options.so.1.82.0
 
 # extra deps
 export cudss_DIR=/tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/lib/cmake/cudss
