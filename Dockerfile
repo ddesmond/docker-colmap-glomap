@@ -31,10 +31,12 @@ RUN pyenv install $PYTHON_VERSION && \
 RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
 
 RUN bash /setup/setup-compile-deps.sh
+RUN bash /setup/setup-compile-cmake.sh
+
+# compile colmap
 RUN bash /setup/compile-colmap.sh
+#RUN bash /setup/compile-glomap.sh
 
-
-
-RUN echo "Done."
+RUN echo "Setup Done."
 
 CMD ["bash","/setup/startup.sh"]
