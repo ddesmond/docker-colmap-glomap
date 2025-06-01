@@ -32,8 +32,7 @@ echo "Building CGAL"
 cd /tmp && mkdir cgal && cd cgal
 wget https://github.com/CGAL/cgal/archive/refs/tags/v5.6.2.tar.gz
 tar xvfz v5.6.2.tar.gz
-mv v5.6.2 cgal_v5.6.2
-cd cgal_v5.6.2
+cd cgal-5.6.2
 mkdir build
 cd build
 cmake ..
