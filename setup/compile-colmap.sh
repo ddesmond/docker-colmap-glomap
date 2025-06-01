@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ln -s /usr/bin/ninja /usr/sbin/ninja
-dnf install boost-program-options-1.82
+dnf install boost-program-options-1.82 -y
 
 
 # extra deps
