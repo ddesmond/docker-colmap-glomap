@@ -4,7 +4,7 @@ ln -s /usr/bin/ninja /usr/sbin/ninja
 
 find / -name "libcudss.so*"
 
-dnf install -y lapack-devel tbb-devel
+dnf install -y lapack-devel tbb-devel gmp gmp-devel
 
 echo "Add cudss"
 cd /tmp && mkdir -p cudss && cd cudss
@@ -27,13 +27,13 @@ mkdir build && cd build
 cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_CUDA_ARCHITECTURES=80
 make -j$(nproc) && make install
 
-cd /tmp && mkdir gmp && cd gmp
-curl -fLO https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
-tar -xf gmp-6.2.1.tar.xz
-cd gmp-6.2.1
-./configure
-make all
-make install
+#cd /tmp && mkdir gmp && cd gmp
+#curl -fLO https://gmplib.org/download/gmp/gmp-6.2.1.tar.xz
+#tar -xf gmp-6.2.1.tar.xz
+#cd gmp-6.2.1
+#./configure
+#make all
+#make install
 
 # build cgal
 echo "Building CGAL"
