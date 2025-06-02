@@ -17,17 +17,6 @@ RUN bash /setup/deps.sh
 ENV HOME=/root \
     PATH=/root/.local/bin:/usr/local:$PATH
 
-## Pyenv
-#RUN curl https://pyenv.run | bash
-#ARG PYTHON_VERSION=3.10.12
-#ENV PATH=$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH
-#
-#RUN pyenv install $PYTHON_VERSION && \
-#    pyenv global $PYTHON_VERSION && \
-#    pyenv rehash && \
-#    pip install --no-cache-dir --upgrade pip setuptools wheel
-
-
 WORKDIR /setup
 COPY ./setup/setup-compile-deps.sh /setup/setup-compile-deps.sh
 RUN chmod +x /setup/*.sh && bash /setup/setup-compile-deps.sh
@@ -72,9 +61,7 @@ COPY --from=builder /glomap-install/ /usr/local/
 COPY --from=builder /usr/local/lib/ /usr/local/lib/
 COPY --from=builder /tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/ /opt/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/
 
-RUN chmod +x /setup/*.sh && bash /setup/post-compile.sh
-
-
+RUN chmod +x /setup/*.sh && bash /setup/post-compile.sh && mkdir -p /data && chmod -R 777 /data
 
 # run
 CMD ["bash","/setup/startup.sh"]
