@@ -35,29 +35,35 @@ RUN chmod +x /setup/*.sh && bash /setup/setup-compile-deps.sh
 # Install Python dependencies
 # RUN pip install --no-cache-dir --upgrade -r /setup/requirements.txt
 
+# Compile cmake
 WORKDIR /setup
 COPY ./setup/setup-compile-cmake.sh /setup/setup-compile-cmake.sh
 RUN chmod +x /setup/*.sh && bash /setup/setup-compile-cmake.sh
 
+# compile deps for colmap/glomap - cuda support
+WORKDIR /setup
+COPY ./setup/compile-deps-colmap-glomap.sh /setup/compile-deps-colmap-glomap.sh
+RUN chmod +x /setup/*.sh && bash /setup/compile-deps-colmap-glomap.sh
 
+# compile colmap
 WORKDIR /setup
 COPY ./setup/compile-colmap.sh /setup/compile-colmap.sh
 # compile colmap
 RUN chmod +x /setup/*.sh && bash /setup/compile-colmap.sh
 
-
-#RUN bash /setup/compile-glomap.sh
+# compile glomap
 WORKDIR /setup
 COPY ./setup/compile-glomap.sh /setup/compile-glomap.sh
 # compile colmap
 RUN chmod +x /setup/*.sh && bash /setup/compile-glomap.sh
 
-
 RUN echo "Compile Done."
 
+# source fresh container so we lower the image size
 
 FROM nvidia/cuda:12.6.3-runtime-rockylinux9 AS runtime
 
+# copy compiled bins and deps
 WORKDIR /setup
 COPY ./setup /setup
 
@@ -68,5 +74,5 @@ COPY --from=builder /tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/ /op
 
 RUN chmod +x /setup/*.sh && bash /setup/post-compile.sh
 
-
+# run
 CMD ["bash","/setup/startup.sh"]
