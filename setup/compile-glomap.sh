@@ -14,7 +14,7 @@ mkdir glomap && cd glomap
 git clone https://github.com/colmap/glomap.git .
 mkdir build
 cd build
-cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=80 -DCMAKE_INSTALL_PREFIX=/glomap-install
+cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=all -DCMAKE_INSTALL_PREFIX=/glomap-install
 ninja && ninja install
 
 /glomap-install/bin/glomap -h
