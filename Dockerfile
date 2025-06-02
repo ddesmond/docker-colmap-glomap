@@ -1,3 +1,6 @@
+ARG CUDA_ARCHITECTURES=all-major
+ENV QT_XCB_GL_INTEGRATION=xcb_egl
+
 FROM nvidia/cuda:12.6.3-runtime-rockylinux9 AS builder
 
 ENV TZ=Europe/Zagreb
