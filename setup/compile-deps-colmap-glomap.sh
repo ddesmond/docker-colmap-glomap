@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "CUDA:" $CUDA_ARCHITECTURES
+
 # boost
 echo "Compiling Boost"
 cd /tmp
@@ -32,7 +34,7 @@ git pull
 sed -i 's/\${cudss_VERSION}//g' CMakeLists.txt
 cat CMakeLists.txt | grep cudss
 mkdir build && cd build
-cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_CUDA_ARCHITECTURES=all
+cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DCMAKE_CUDA_ARCHITECTURES=$CUDA_ARCHITECTURES
 make -j$(nproc) && make install
 
 # build cgal
