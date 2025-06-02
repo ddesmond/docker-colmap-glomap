@@ -74,5 +74,7 @@ COPY --from=builder /tmp/cudss/libcudss-linux-x86_64-0.3.0.9_cuda12-archive/ /op
 
 RUN chmod +x /setup/*.sh && bash /setup/post-compile.sh
 
+
+
 # run
 CMD ["bash","/setup/startup.sh"]
