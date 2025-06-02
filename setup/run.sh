@@ -11,5 +11,4 @@ glomap -h
 echo "GPU Supported:"
 nvidia-smi
 
-
-/bin/bash -l
+sleep infinity
