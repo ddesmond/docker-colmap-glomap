@@ -18,4 +18,4 @@ services:
         - ./data:/data
 
     #command: [ "/bin/bash", "-c", "bash /setup/run.sh" ]
-    command: ["/bin/bash", "-c", "sleep", "infinity"]
+    command: ["sleep", "infinity"]
