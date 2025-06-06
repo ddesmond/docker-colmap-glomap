@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "_____ Startup _____"
-if [ -e /.colmap-init ]; then
+if [ -e /setup/.colmap-init ]; then
   bash /setup/setup.sh
   bash /setup/run.sh
 else

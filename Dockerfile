@@ -1,5 +1,5 @@
 
-FROM nvidia/cuda:12.6.3-runtime-rockylinux9 AS builder
+FROM nvidia/cuda:12.3.2-runtime-rockylinux9 AS builder
 ARG CUDA_ARCHITECTURES=all
 
 ENV QT_XCB_GL_INTEGRATION=xcb_egl
@@ -54,7 +54,7 @@ RUN echo "Compile Done."
 
 # source fresh container so we lower the image size
 
-FROM nvidia/cuda:12.6.3-runtime-rockylinux9 AS runtime
+FROM nvidia/cuda:12.3.2-runtime-rockylinux9 AS runtime
 
 # copy compiled bins and deps
 WORKDIR /setup
